@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  .theme-selector {
+    position: fixed;
+    z-index: 1000;
+    width: 20rem;
+    background: #212529cc;
+    top: 15rem;
+    left: calc(100% - 5rem);
+    display: flex;
+    border-radius: 4rem 0 0 4rem;
+    border: .1rem solid #adb5bd33;
+    transition: .3s;
+  }
+  .theme-selector.show {
+    left: calc(100% - 20rem);
+  }
+  
+  .theme-selector .open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 5rem;
+    height: 5rem;
+    border-right: .1rem solid #adb5bd33;
+  }
+  
+  .theme-selector .open i {
+    color: #fff;
+    font-size: 2.5rem;
+  }
+  
+  .theme-selector .color-container {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .theme-selector .color-container a {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-top: 1.5rem;
+  }
+
+  .theme-selector .color-container a.light {
+    background-color: white;
+    border: .1rem solid #343a40;
+  }
+
+  .theme-selector .color-container a.dark {
+    background-color: #343a40;
+    border: .1rem solid #fff;
+  }
+
+  body.light-theme {
+    background-color: #fff;
+  }
+
+  body.dark-theme {
+    background-color: #212529;
+  }
+
+  .header {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)), url(image2.jpg)  no-repeat center/cover; 
+  }
+
+  .navbar {
+    width: 100%;
+    padding: 3rem 8%;
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  .navbar ul li {
+    margin: 1rem;
+  }
+  .navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8rem;
+  }
+
+  body.light-theme .header {
+    background: url(image2.jpg) no-repeat center/cover; 
+  }
+
+  body.light-theme .navbar ul li a {
+    color: #000;
+  }
+
+  .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8vw;
+  }
+
+  .title-2 {
+    display: none;
+  }
+
+  body.dark-theme .title-1 {
+    display: none;
+  }
+
+  body.dark-theme .title-2 {
+    display: block;
+    color: #fff;
+  }
+
